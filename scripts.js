@@ -8,12 +8,19 @@
     ctx.fillStyle = '#F0DB4F';
 
     // map
-    const map = [1, 0, 1, 0, 1, 0, 1, 0];
+    // 0: road      1: wall      2: roads with points
+    const map = [1, 1, 1, 1, 1, 1, 1, 1];
+    pos_x = 50;
+    pos_y = 50;
+    scale_x = 20000;
     map.forEach(item => {
-        console.log(`${item}`)
+        if(item == 1) {
+            ctx.fillStyle = '#393ff1';
+            ctx.fillRect(pos_x, pos_y, scale_x, 2);
+            pos_x += scale_x;
+        };
     });
 
     // draw a rectangle with fill and stroke
-    ctx.fillRect(50, 50, 500, 500);
 
 })();
