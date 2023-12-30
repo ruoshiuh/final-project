@@ -17,8 +17,8 @@
     initial_y = 50;
     pos_x = initial_x;
     pos_y = initial_y;
-    scale_x = 30;
-    scale_y = 12;
+    block_x = 30;
+    block_y = 12;
     ctx.lineWidth = 3;
     for(let i = 0; i < map.length; i++) 
     {
@@ -30,21 +30,21 @@
             if(row[j] == 0) 
             {
                 ctx.fillStyle = '#fff';
-                ctx.fillRect(pos_x, pos_y, scale_x, scale_y);
-                pos_x += scale_x;
+                ctx.fillRect(pos_x, pos_y, block_x, block_y);
+                pos_x += block_x;
             }    
             if(row[j] == 1) 
             {
                 ctx.fillStyle = 'black';
                 ctx.strokeStyle = '#393ff1';
-                ctx.fillRect(pos_x, pos_y, scale_x, scale_y);
-                ctx.strokeRect(pos_x, pos_y, scale_x, scale_y);
-                pos_x += scale_x;
+                ctx.fillRect(pos_x, pos_y, block_x, block_y);
+                ctx.strokeRect(pos_x, pos_y, block_x, block_y);
+                pos_x += block_x;
             }    
         }
         // a row has ended, reset the starting point
         pos_x = initial_x;
-        pos_y = initial_y + (scale_y * i);
+        pos_y = initial_y + (block_y * i);
     }
 
 
