@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="hobbies.css" rel="stylesheet">
+        <script src="hobbies.js"></script>
+        <title>Hobbies</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!--navigation bar-->
+            <nav>
+                <div></div>
+                <img src="../images/logo.png" class="logo" onclick="goHome()">
+                <img src="../images/santa.png" class="user-pic" onclick="toggleMenu()">
+
+                <div class="sub-menu-wrap" id="subMenu">
+                 <div class="sub-menu">
+                        <div class="user-info">
+                                <img src="../images/welcome.png">
+                                <h3>Hello there!</h3>
+                        </div>
+                        <hr>
+                        <a href="../index.html" class="sub-menu-link">
+                            <img src="../images/home.png">
+                            <p>Home</p>
+                            <span>></span> <!--the arrow sign-->
+                        </a>
+                        <a href="../homeland/homeland.html" class="sub-menu-link">
+                            <img src="../images/homeland.png">
+                            <p>Homeland</p>
+                            <span>></span>
+                        </a>
+                        <a href="../foods/foods.html" class="sub-menu-link">
+                            <img src="../images/foods.png">
+                            <p>Foods</p>
+                            <span>></span>
+                        </a>
+                        <a href="../footprints/footprints.html" class="sub-menu-link">
+                            <img src="../images/footprints.png">
+                            <p>Footprints</p>
+                            <span>></span>
+                        </a>
+                 </div>
+                </div>
+            </nav>
+            <!--title-->
+            <h1 class="title">My hobbies</h1>
+            <!--hobby one-->
+            <div class="hobby-wrap">
+                <img src="images/netflix.webp" class="hobby-pic">
+                <div class="content-wrap" id="content-wrap1">
+                    <h2 id="content-1">tv shows and movies.</h2>
+                    <h4><span class="underline1">FRIENDS are the best!🤩</span></h4>
+                </div>
+            </div>
+
+            <div class="hobby-wrap">
+                <img src="images/football.jpeg" class="hobby-pic">
+                <div class="content-wrap" id="content-wrap2">
+                    <h2 id="content-2">football.</h2>
+                    <h4><span class="underline2">One of the best sports ever created🥳</span></h4>
+                </div>
+            </div>
+            <div class="hobby-wrap">
+                <img src="images/coding.jpg" class="hobby-pic">
+                <div class="content-wrap" id="content-wrap3">
+                    <h2 id="content-3">coding.</h2>
+                    <h4><span class="underline3">I just love the process of solving problems!🤟</span></h4>
+                </div>
+            </div>
+            <!--guide to other page-->
+            <div class="guide">
+                <hr class="line1"></hr>
+                <h5>Want to visit other pages?</h5>
+                <h6>Just click on the top right corner santa ↗️</h6>
+                <hr class="line2"></hr>
+            </div>
+        </div>
+    </body>
+</html>

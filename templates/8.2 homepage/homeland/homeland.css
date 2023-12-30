@@ -1,0 +1,264 @@
+/* overall setting*/
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #1f528f;
+    font-family: system-ui;
+  }
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1f528f;
+    color: #525252;
+}
+
+/* navigation bar*/
+nav {
+    width: 100%; /* making it left until logo, right until user-pic*/
+    padding: 10px 5%;
+    display: flex; /* make it horizontal*/
+    align-items: center;
+    justify-content: space-between;/* make it spread*/
+    position: relative;
+}
+
+.logo {
+    width: 170px;
+    cursor: pointer;
+}
+
+.user-pic {
+    width: 40px;
+    border-radius: 50%;
+    background: #ffd700;
+    cursor: pointer; /* make cursor change to little hand when hover*/
+    margin-left: 30px;
+}
+
+
+    /* sub-menu*/
+.sub-menu-wrap {
+    position: absolute; /*asking its parents: is your position set to relative. once founded, this wrap position itself relative to that, in this case: nav*/
+    top: 75%; /* making it right below nav*/
+    right: 5%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 1;
+}
+.sub-menu-wrap.open-menu {
+    max-height: 400px;
+
+}
+
+
+.sub-menu {
+    background: #ffd700;
+    padding: 20px;
+    margin: 10px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+}
+.user-info h3 {
+    font-weight: 500;
+}
+.user-info img {
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+.user-info:hover img{
+    background: #1f528f;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    margin: 15px 0px 10px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+.sub-menu-link p {
+    width: 100%;
+}
+.sub-menu-link img {
+    width: 40px;
+    background: #1f528f;
+    border-radius: 50%;
+    padding: 8px; /* make the img smaller */
+    margin-right: 15px;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+.sub-menu-link:hover p {
+    font-weight: 600;
+}
+
+
+/* title */
+#title {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 800;
+    color: #ffd700;
+    margin-top: 0;
+}
+
+
+
+/* main part */
+.main-part {
+    display: flex;
+}
+
+.google-map-container {
+    width: 600px;
+    margin-top: 25px;
+    margin-left: 20px;
+    border: 1px solid #fff;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.main-part1 h1 {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: sweden_sansbold, sans-serif;
+    color: #ffd700;
+    margin: 0px 5px 0px 7px;
+
+}
+.main-part1 h2 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: sweden_sansbold, sans-serif;
+    color: #ffd700;
+    margin: 2px 5px 0px 7px;
+}
+
+.main-part1 hr {
+    border: 0;
+    height: 10px;
+    width: 50px;
+    background: #fff;
+    position: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.main-part1 hr.line2 {
+    width: 100px;
+}
+
+
+
+
+    /*right part*/
+.main-part2 {
+    width: 60%;
+    margin-left: 5%;
+}
+.main-part2 h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 70px;
+    font-weight: 800;
+    color: #ffd700;
+}
+.main-part2 p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 60px;
+    font-weight: 800;
+    color: #ffd700;
+}
+
+.main-part2 div {
+    width: 30px;
+    background-color: #fff;
+    margin-left: 40%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 7px solid #fff;
+}
+    /* drawing line animation*/
+.underline {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 10px), #ffd700 10px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.5s;
+  }
+  .underline2 {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 10px), #ffd700 10px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.5s;
+  }
+
+  .main-part2 #text2:hover .underline {
+    background-size: 100% 100%;
+  }
+  .main-part2 #text3:hover .underline2 {
+    background-size: 100% 100%;
+  }
+
+  /* responsive web for phone*/
+    @media screen and (max-width:1016px){
+        .main-part {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .main-part1 {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .google-map-container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .main-part1 h1 {
+            text-align: center;
+        }
+        .main-part1 h2 {
+            text-align: center;
+        }
+
+
+    }
+
+    @media screen and (max-width:600px){
+        .google-map-container {
+            transform: translateX(-140px);
+        }
+
+}

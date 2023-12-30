@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="footprints.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="footprints.js"></script>
+        <title>footprints</title>
+    </head>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #1f528f;
+        }
+        h1 {
+            font-size: 70px;
+            font-weight: 800;
+            text-align: center;
+            color: #ffd700;
+        }
+        #main-wrap h2 {
+            font-size: 60px;
+            font-weight: 800;
+            line-height: 1.5;
+            color: #1f528f;
+        }
+        #main-wrap p {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.5;
+            color: #1f528f;
+        }
+        /********* content part **********/
+       .content-wrap {
+            background: #ffd700;
+            height: 600px;
+            position: relative;
+            margin-top: 20px;
+        }
+        .content-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity ease 0.25s;
+        }
+        .content-box:nth-child(1) {
+            width: calc(70%);
+        }
+
+        .content-box:nth-child(2) {
+            opacity: 0;
+        }
+        .content-box:nth-child(3) {
+            width: calc(90%);
+            opacity: 0;
+        }
+
+        /********** picture part ************/
+        .pic-wrap {
+            background: #ffd700;
+            height: 600px;
+            margin-top: 20px;
+        }
+        .pic-wrap {
+            padding: 2rem;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .slider {
+            display: flex;
+            aspect-ratio: 16 / 9;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 9%, 0%, 0.25);
+            border-radius: 0.5rem;
+        }
+
+        .slider img {
+            flex: 1 0 100%;
+            scroll-snap-align: start;
+            object-fit: cover;
+        }
+
+        .slider-nav {
+            display: flex;
+            column-gap: 2rem;
+            position: absolute;
+            bottom: -2.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .slider-nav a {
+            height: 0.7rem;
+            width: 0.7rem;
+            border-radius: 50%;
+            background-color: #1f528f;
+            opacity: 0.75;
+            transition: opacity ease 250ms;
+        }
+
+        .slider-nav a:hover {
+            opacity: 1;
+        }
+        /* guide*/
+        .guide {
+            width: 50%;
+            text-align: center;
+        }
+        .guide hr {
+            border: 0;
+            height: 10px;
+            width: 50px;
+            background: #fff;
+            opacity: 1;
+            margin: 30px auto 20px auto;
+        }
+        .guide hr.line2 {
+            width: 100px;
+        }
+        .guide h5 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffd700;
+        }
+        .guide h6 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #ffd700;
+            margin-top: 2px;
+            font-family: sweden_sansbold, sans-serif;
+        }
+
+    </style>
+
+
+    <body>
+        <div class="wrapper">
+            <!-----------navigation bar---------------->
+            <nav>
+                <div></div>
+                <img src="../images/logo.png" class="logo" onclick="goHome()">
+                <img src="../images/santa.png" class="user-pic" onclick="toggleMenu()">
+
+                <div class="sub-menu-wrap" id="subMenu">
+                 <div class="sub-menu">
+                        <div class="user-info">
+                                <img src="../images/welcome.png">
+                                <h4>Hello there!</h4>
+                        </div>
+                        <hr>
+                        <a href="../index.html" class="sub-menu-link">
+                            <img src="../images/home.png">
+                            <p>Home</p>
+                            <span>></span> <!--the arrow sign-->
+                        </a>
+                        <a href="../homeland/homeland.html" class="sub-menu-link">
+                            <img src="../images/homeland.png">
+                            <p>Homeland</p>
+                            <span>></span>
+                        </a>
+                        <a href="../hobbies/hobbies.html" class="sub-menu-link">
+                            <img src="../images/hobbies.png">
+                            <p>Hobbies</p>
+                            <span>></span>
+                        </a>
+                        <a href="../foods/foods.html" class="sub-menu-link">
+                            <img src="../images/foods.png">
+                            <p>Foods</p>
+                            <span>></span>
+                        </a>
+                 </div>
+                </div>
+            </nav>
+            <!-------------title-------------->
+            <h1>My favorite trips</h1>
+
+            <!-------------main part-------------->
+            <div class="container-xl py-5">
+                <div class="row justiy-content-center" id="main-wrap">
+                    <!----content---->
+                    <div class="col-lg-4">
+                        <div class="content-wrap">
+                            <div class="content-box">
+                                <h2>Japan.</h2>
+                                <p>the snow was stunning, and I really enjoyed various delicious dishes there</p>
+                            </div>
+                            <div class="content-box">
+                                <h2>Philippines.</h2>
+                                <p>I love the beach in Boracay, and the people there were wonderful!🥳</p>
+                            </div>
+                            <div class="content-box">
+                                <h2>Vietnam.</h2>
+                                <p>the archaeological sites there were breathtaking🤩</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!----pictures---->
+                    <div class="col-lg-8">
+                        <div class="pic-wrap">
+                            <div class="slider-wrapper">
+                                <div class="slider">
+                                    <img id="slide-1" src="images/japan.jpg">
+                                    <img id="slide-2" src="images/philippines.jpeg">
+                                    <img id="slide-3" src="images/vietnam.jpg">
+                                </div>
+                                <div class="slider-nav">
+                                    <a href="#slide-1" class="lbtn"></a>
+                                    <a href="#slide-2" class="lbtn"></a>
+                                    <a href="#slide-3" class="lbtn"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!--Guide to other pages-->
+        <div class="guide">
+            <hr class="line1"></hr>
+            <h5>Want to visit other pages?</h5>
+            <h6>Just click on the top right corner santa ↗️</h6>
+            <hr class="line2"></hr>
+        </div>
+
+
+
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+    </html>

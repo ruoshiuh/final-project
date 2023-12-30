@@ -1,0 +1,137 @@
+/* overall settings*/
+body {
+    background-color: #1f528f;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+/*main lines setttings*/
+.top-container {
+    height: 80px;
+    width: 95%;
+    margin-top: 20px;
+    margin-left: 2.5%;
+    background-color: tansparent;
+}
+
+.main-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-texts {
+    font-weight: bold;
+    font-size: 60px;
+    color: #ffd700;
+
+}
+
+#main-text2 {
+    width: 800px;
+    margin-bottom: 10px;
+}
+#main-text2-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#line {
+    border: 10px solid;
+    width: 130px;
+    color: #fff;
+    opacity: .9;
+}
+
+/*middle segment part*/
+.middle-container{
+    height: 80px;
+    width: 87.5%;
+    margin-top: 1%;
+    margin-left: 6.25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd700;
+}
+
+
+p {
+    margin-top: 7px;
+    font-size: 40px;
+    font-weight: 850;
+    color: #1f528f;
+}
+
+/*bottom container*/
+.bottom-container {
+    height: 500;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+.bottom-box {
+    width: 310px;
+    height: 350px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #ffd700;
+    display: flex;
+    flex-direction: column;
+}
+
+    /* words and lines on the bottom boxs*/
+.box-text1 {
+    height: 25%;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 850;
+    color: #1f528f;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.line2 {
+    height: 5%;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #fff;
+}
+.box-text2 {
+    height: 50%;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 27px;
+    font-weight: 850;
+    color: #1f528f;
+}
+    /* arrows in the bottom boxs*/
+.arrow {
+    height: 20%;
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10%;
+}
+
+/* responsive web for phones*/
+@media screen and (max-width:897px){
+    #main-text2 {
+        width: 90%;
+    }
+}
+

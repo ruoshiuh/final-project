@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sweden_sansbold, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #1f528f;
+  }
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1f528f;
+}
+
+/* navigation bar*/
+nav {
+    width: 100%; /* making it left until logo, right until user-pic*/
+    padding: 10px 5%;
+    display: flex; /* make it horizontal*/
+    align-items: center;
+    justify-content: space-between;/* make it spread*/
+    color: #525252;
+    position: relative;
+}
+.logo {
+    width: 170px;
+    cursor: pointer;
+}
+
+.user-pic {
+    width: 40px;
+    border-radius: 50%;
+    background: #ffd700;
+    cursor: pointer; /* make cursor change to little hand when hover*/
+    margin-left: 30px;
+}
+
+
+    /* sub-menu*/
+.sub-menu-wrap {
+    position: absolute;
+    top: 75%;
+    right: 5%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+
+.sub-menu {
+    background: #ffd700;
+    padding: 20px;
+    margin: 10px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+}
+.user-info h3 {
+    font-weight: 700;
+}
+.user-info img {
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+.user-info:hover img{
+    background: #1f528f;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    margin: 15px 0px 10px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+.sub-menu-link p {
+    width: 100%;
+}
+.sub-menu-link img {
+    width: 40px;
+    background: #1f528f;
+    border-radius: 50%;
+    padding: 8px; /* make the img smaller */
+    margin-right: 15px;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+.sub-menu-link:hover p {
+    font-weight: 600;
+}
+
+
+.title {
+    color: #ffd700;
+    font-size:200px;
+}
+
+
+
+.hobby-pic {
+    max-width: 700px;
+    margin-left: 20px;
+    border: 3px solid #ffd700;
+}
+
+.hobby-wrap {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+}
+.content-wrap {
+    margin-left: 150px;
+}
+
+h2 {
+    font-size: 70px;
+    color: #ffd700;
+}
+h4 {
+    font-size: 50px;
+    color: #ffd700;
+}
+
+#content-wrap1:hover #content-1 {
+    padding-left: 7px;
+    background-color: #ffd700;
+    color: #1f528f;
+}
+#content-wrap2:hover #content-2 {
+    width: 300px;
+    padding-left: 7px;
+    background-color: #ffd700;
+    color: #1f528f;
+}
+#content-wrap3:hover #content-3 {
+    width: 300px;
+    padding-left: 7px;
+    background-color: #ffd700;
+    color: #1f528f;
+}
+/*underline animetion*/
+
+.underline1 {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 2px), #ffd700 10px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.3s;
+  }
+  .underline2 {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 2px), #ffd700 10px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.3s;
+  }
+  .underline3 {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 2px), #ffd700 10px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.3s;
+  }
+
+  #content-wrap1:hover .underline1 {
+    background-size: 100% 100%;
+  }
+  #content-wrap2:hover .underline2 {
+    background-size: 100% 100%;
+  }
+  #content-wrap3:hover .underline3 {
+    background-size: 100% 100%;
+  }
+
+/* guide*/
+.guide {
+    width: 100%;
+    text-align: center;
+    margin-top: 300px;
+}
+.guide hr {
+    border: 0;
+    height: 10px;
+    width: 50px;
+    background: #fff;
+    margin: 30px auto 20px auto;
+}
+.guide hr.line2 {
+    width: 100px;
+}
+.guide h5 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffd700;
+}
+.guide h6 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffd700;
+    margin-top: 2px;
+}
+
+/* resposive web for phones*/
+@media screen and (max-width:1190px){
+    .hobby-wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .hobby-wrap img {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+}
+
