@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<div class="section">
+    <h2>Transaction History</h2>
+    <h4>User ID: {{ user_id }}</h4>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date (UTC+0)</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price (USD)</th>
+                <th>Transaction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in history_symbol %}
+                <tr>
+                    <td>{{ row["datetime"] }}</td>
+                    <td>{{ row["symbol"] }}</td>
+                    <td>{{ row["shares"] }}</td>
+                    <td>{{ row["price"] }}</td>
+                    <td>{{ row["status"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="section mt-5">
+<h2 class="mt-5">Transfer records</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Date (UTC+0)</th>
+            <th>Amount (USD)</th>
+            <th>Transaction</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in history_transfers %}
+            <tr>
+                <td>{{ row["datetime"] }}</td>
+                <td>{{ row["amount"] }}</td>
+                <td>{{ row["status"] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}
