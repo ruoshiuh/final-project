@@ -52,6 +52,19 @@
                 ctx.fillStyle = 'black';
                 ctx.fillRect(pos_x + padding, pos_y + padding, block * 2 - padding * 2, block - padding * 2);
             } 
+            // 2. adjacent top and botttom
+            if(row[j] == 1 && map[i + 1][j] == 1)
+            {
+                ctx.fillStyle = 'black';
+                ctx.fillRect(pos_x + padding, pos_y + padding, block  - padding * 2, block * 2 - padding * 2);
+
+            }
+            // 3. all four adjacent block: top bottom left right 
+            if (row[j] == 1 && row[j + 1] == 1 && map[i + 1][j] == 1 && map[i + 1][j + 1] == 1)
+            {
+                ctx.fillStyle = 'black';
+                ctx.fillRect(pos_x + padding, pos_y + padding, block * 2 - padding * 2, block * 2 - padding * 2);
+            }
         }
     }
    
